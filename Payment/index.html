@@ -8,7 +8,7 @@
 </html>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const value = urlParams.get('value');
+    let value = urlParams.get('value');
     if (value) {
         value = value.replace('/', '');
     }
