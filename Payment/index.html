@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <title>Payment</title>
+    <body>
+        <h1>Payment</h1>
+        <p><span>You landed here with the invoice value: </span><span id="value"></span></p>
+    </body>
+</html>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get('value');
+    document.getElementById('value').innerText = value;
+</script>
