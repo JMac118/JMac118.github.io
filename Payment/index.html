@@ -9,5 +9,8 @@
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const value = urlParams.get('value');
+    if (value) {
+        value = value.replace('/', '');
+    }
     document.getElementById('value').innerText = value;
 </script>
