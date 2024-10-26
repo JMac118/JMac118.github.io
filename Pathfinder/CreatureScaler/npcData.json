@@ -1,0 +1,4407 @@
+{
+    "npcData": {
+        "Guard": {
+            "level": 1,
+            "perception": 7,
+            "skills": {
+                "athletics": 7,
+                "intimidation": 5,
+                "legalLore": 3
+            },
+            "abilities": {
+                "str": 4,
+                "dex": 2,
+                "con": 2,
+                "int": 0,
+                "wis": 2,
+                "cha": -1
+            },
+            "ac": 18,
+            "fort": 7,
+            "ref": 5,
+            "will": 5,
+            "hp": 20,
+            "speed": 25,
+            "melee": {
+                "club": {
+                    "attack": 9,
+                    "damage": "1d6+4"
+                },
+                "sap": {
+                    "attack": 9,
+                    "damage": "1d6+4"
+                }
+            },
+            "ranged": {
+                "crossbow": {
+                    "attack": 7,
+                    "damage": "1d8"
+                },
+                "club": {
+                    "attack": 7,
+                    "damage": "1d6+4"
+                }
+            },
+            "languages": [
+                "Common"
+            ],
+            "items": [
+                "club",
+                "crossbow (10 bolts)",
+                "dagger",
+                "sap",
+                "scale mail",
+                "signal whistle"
+            ],
+            "attackOfOpportunity": true,
+            "meleeActions": {
+                "club": {
+                    "attack": 9,
+                    "damage": "1d6+4 bludgeoning",
+                    "traits": []
+                },
+                "sap": {
+                    "attack": 9,
+                    "damage": "1d6+4 bludgeoning",
+                    "traits": [
+                        "agile",
+                        "nonlethal"
+                    ]
+                }
+            },
+            "rangedActions": {
+                "crossbow": {
+                    "attack": 7,
+                    "damage": "1d8 piercing",
+                    "traits": [
+                        "range increment 120 feet",
+                        "reload 1"
+                    ]
+                },
+                "club": {
+                    "attack": 7,
+                    "damage": "1d6+4 bludgeoning",
+                    "traits": [
+                        "thrown 10 feet"
+                    ]
+                }
+            }
+        }
+    },
+    "abilityModifierScales": [
+        {
+            "level": -1,
+            "extreme": null,
+            "high": 3,
+            "moderate": 2,
+            "low": 0
+        },
+        {
+            "level": 0,
+            "extreme": null,
+            "high": 3,
+            "moderate": 2,
+            "low": 0
+        },
+        {
+            "level": 1,
+            "extreme": 5,
+            "high": 4,
+            "moderate": 3,
+            "low": 1
+        },
+        {
+            "level": 2,
+            "extreme": 5,
+            "high": 4,
+            "moderate": 3,
+            "low": 1
+        },
+        {
+            "level": 3,
+            "extreme": 5,
+            "high": 4,
+            "moderate": 3,
+            "low": 1
+        },
+        {
+            "level": 4,
+            "extreme": 6,
+            "high": 5,
+            "moderate": 3,
+            "low": 2
+        },
+        {
+            "level": 5,
+            "extreme": 6,
+            "high": 5,
+            "moderate": 4,
+            "low": 2
+        },
+        {
+            "level": 6,
+            "extreme": 7,
+            "high": 5,
+            "moderate": 4,
+            "low": 2
+        },
+        {
+            "level": 7,
+            "extreme": 7,
+            "high": 6,
+            "moderate": 4,
+            "low": 2
+        },
+        {
+            "level": 8,
+            "extreme": 7,
+            "high": 6,
+            "moderate": 4,
+            "low": 3
+        },
+        {
+            "level": 9,
+            "extreme": 7,
+            "high": 6,
+            "moderate": 4,
+            "low": 3
+        },
+        {
+            "level": 10,
+            "extreme": 8,
+            "high": 7,
+            "moderate": 5,
+            "low": 3
+        },
+        {
+            "level": 11,
+            "extreme": 8,
+            "high": 7,
+            "moderate": 5,
+            "low": 3
+        },
+        {
+            "level": 12,
+            "extreme": 8,
+            "high": 7,
+            "moderate": 5,
+            "low": 4
+        },
+        {
+            "level": 13,
+            "extreme": 9,
+            "high": 8,
+            "moderate": 5,
+            "low": 4
+        },
+        {
+            "level": 14,
+            "extreme": 9,
+            "high": 8,
+            "moderate": 5,
+            "low": 4
+        },
+        {
+            "level": 15,
+            "extreme": 9,
+            "high": 8,
+            "moderate": 6,
+            "low": 4
+        },
+        {
+            "level": 16,
+            "extreme": 10,
+            "high": 9,
+            "moderate": 6,
+            "low": 5
+        },
+        {
+            "level": 17,
+            "extreme": 10,
+            "high": 9,
+            "moderate": 6,
+            "low": 5
+        },
+        {
+            "level": 18,
+            "extreme": 10,
+            "high": 9,
+            "moderate": 6,
+            "low": 5
+        },
+        {
+            "level": 19,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 6,
+            "low": 5
+        },
+        {
+            "level": 20,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 7,
+            "low": 6
+        },
+        {
+            "level": 21,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 7,
+            "low": 6
+        },
+        {
+            "level": 22,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 8,
+            "low": 6
+        },
+        {
+            "level": 23,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 8,
+            "low": 6
+        },
+        {
+            "level": 24,
+            "extreme": 13,
+            "high": 12,
+            "moderate": 9,
+            "low": 7
+        }
+    ],
+    "perceptionScales": [
+        {
+            "level": -1,
+            "extreme": 9,
+            "high": 8,
+            "moderate": 5,
+            "low": 2,
+            "terrible": 0
+        },
+        {
+            "level": 0,
+            "extreme": 10,
+            "high": 9,
+            "moderate": 6,
+            "low": 3,
+            "terrible": 1
+        },
+        {
+            "level": 1,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 7,
+            "low": 4,
+            "terrible": 2
+        },
+        {
+            "level": 2,
+            "extreme": 12,
+            "high": 11,
+            "moderate": 8,
+            "low": 5,
+            "terrible": 3
+        },
+        {
+            "level": 3,
+            "extreme": 14,
+            "high": 12,
+            "moderate": 9,
+            "low": 6,
+            "terrible": 4
+        },
+        {
+            "level": 4,
+            "extreme": 15,
+            "high": 14,
+            "moderate": 11,
+            "low": 8,
+            "terrible": 6
+        },
+        {
+            "level": 5,
+            "extreme": 17,
+            "high": 15,
+            "moderate": 12,
+            "low": 9,
+            "terrible": 7
+        },
+        {
+            "level": 6,
+            "extreme": 18,
+            "high": 17,
+            "moderate": 14,
+            "low": 11,
+            "terrible": 8
+        },
+        {
+            "level": 7,
+            "extreme": 20,
+            "high": 18,
+            "moderate": 15,
+            "low": 12,
+            "terrible": 10
+        },
+        {
+            "level": 8,
+            "extreme": 21,
+            "high": 19,
+            "moderate": 16,
+            "low": 13,
+            "terrible": 11
+        },
+        {
+            "level": 9,
+            "extreme": 23,
+            "high": 21,
+            "moderate": 18,
+            "low": 15,
+            "terrible": 12
+        },
+        {
+            "level": 10,
+            "extreme": 24,
+            "high": 22,
+            "moderate": 19,
+            "low": 16,
+            "terrible": 14
+        },
+        {
+            "level": 11,
+            "extreme": 26,
+            "high": 24,
+            "moderate": 21,
+            "low": 18,
+            "terrible": 15
+        },
+        {
+            "level": 12,
+            "extreme": 27,
+            "high": 25,
+            "moderate": 22,
+            "low": 19,
+            "terrible": 16
+        },
+        {
+            "level": 13,
+            "extreme": 29,
+            "high": 26,
+            "moderate": 23,
+            "low": 20,
+            "terrible": 18
+        },
+        {
+            "level": 14,
+            "extreme": 30,
+            "high": 28,
+            "moderate": 25,
+            "low": 22,
+            "terrible": 19
+        },
+        {
+            "level": 15,
+            "extreme": 32,
+            "high": 29,
+            "moderate": 26,
+            "low": 23,
+            "terrible": 20
+        },
+        {
+            "level": 16,
+            "extreme": 33,
+            "high": 30,
+            "moderate": 28,
+            "low": 25,
+            "terrible": 22
+        },
+        {
+            "level": 17,
+            "extreme": 35,
+            "high": 32,
+            "moderate": 29,
+            "low": 26,
+            "terrible": 23
+        },
+        {
+            "level": 18,
+            "extreme": 36,
+            "high": 33,
+            "moderate": 30,
+            "low": 27,
+            "terrible": 24
+        },
+        {
+            "level": 19,
+            "extreme": 38,
+            "high": 35,
+            "moderate": 32,
+            "low": 29,
+            "terrible": 26
+        },
+        {
+            "level": 20,
+            "extreme": 39,
+            "high": 36,
+            "moderate": 33,
+            "low": 30,
+            "terrible": 27
+        },
+        {
+            "level": 21,
+            "extreme": 41,
+            "high": 38,
+            "moderate": 35,
+            "low": 32,
+            "terrible": 28
+        },
+        {
+            "level": 22,
+            "extreme": 43,
+            "high": 39,
+            "moderate": 36,
+            "low": 33,
+            "terrible": 30
+        },
+        {
+            "level": 23,
+            "extreme": 44,
+            "high": 40,
+            "moderate": 37,
+            "low": 34,
+            "terrible": 31
+        },
+        {
+            "level": 24,
+            "extreme": 46,
+            "high": 42,
+            "moderate": 38,
+            "low": 36,
+            "terrible": 32
+        }
+    ],
+    "skillsScales": [
+        {
+            "level": -1,
+            "extreme": 8,
+            "high": 5,
+            "moderate": 4,
+            "low": "2 to 1"
+        },
+        {
+            "level": 0,
+            "extreme": 9,
+            "high": 6,
+            "moderate": 5,
+            "low": "3 to 2"
+        },
+        {
+            "level": 1,
+            "extreme": 10,
+            "high": 7,
+            "moderate": 6,
+            "low": "4 to 3"
+        },
+        {
+            "level": 2,
+            "extreme": 11,
+            "high": 8,
+            "moderate": 7,
+            "low": "5 to 4"
+        },
+        {
+            "level": 3,
+            "extreme": 13,
+            "high": 10,
+            "moderate": 9,
+            "low": "7 to 5"
+        },
+        {
+            "level": 4,
+            "extreme": 15,
+            "high": 12,
+            "moderate": 10,
+            "low": "8 to 7"
+        },
+        {
+            "level": 5,
+            "extreme": 16,
+            "high": 13,
+            "moderate": 12,
+            "low": "10 to 8"
+        },
+        {
+            "level": 6,
+            "extreme": 18,
+            "high": 15,
+            "moderate": 13,
+            "low": "11 to 9"
+        },
+        {
+            "level": 7,
+            "extreme": 20,
+            "high": 17,
+            "moderate": 15,
+            "low": "13 to 11"
+        },
+        {
+            "level": 8,
+            "extreme": 21,
+            "high": 18,
+            "moderate": 16,
+            "low": "14 to 12"
+        },
+        {
+            "level": 9,
+            "extreme": 23,
+            "high": 20,
+            "moderate": 18,
+            "low": "16 to 13"
+        },
+        {
+            "level": 10,
+            "extreme": 25,
+            "high": 22,
+            "moderate": 19,
+            "low": "17 to 15"
+        },
+        {
+            "level": 11,
+            "extreme": 26,
+            "high": 23,
+            "moderate": 21,
+            "low": "19 to 16"
+        },
+        {
+            "level": 12,
+            "extreme": 28,
+            "high": 25,
+            "moderate": 22,
+            "low": "20 to 17"
+        },
+        {
+            "level": 13,
+            "extreme": 30,
+            "high": 27,
+            "moderate": 24,
+            "low": "22 to 19"
+        },
+        {
+            "level": 14,
+            "extreme": 31,
+            "high": 28,
+            "moderate": 25,
+            "low": "23 to 20"
+        },
+        {
+            "level": 15,
+            "extreme": 33,
+            "high": 30,
+            "moderate": 27,
+            "low": "25 to 21"
+        },
+        {
+            "level": 16,
+            "extreme": 35,
+            "high": 32,
+            "moderate": 28,
+            "low": "26 to 23"
+        },
+        {
+            "level": 17,
+            "extreme": 36,
+            "high": 33,
+            "moderate": 30,
+            "low": "28 to 24"
+        },
+        {
+            "level": 18,
+            "extreme": 38,
+            "high": 35,
+            "moderate": 31,
+            "low": "29 to 25"
+        },
+        {
+            "level": 19,
+            "extreme": 40,
+            "high": 37,
+            "moderate": 33,
+            "low": "31 to 27"
+        },
+        {
+            "level": 20,
+            "extreme": 41,
+            "high": 38,
+            "moderate": 34,
+            "low": "32 to 28"
+        },
+        {
+            "level": 21,
+            "extreme": 43,
+            "high": 40,
+            "moderate": 36,
+            "low": "34 to 29"
+        },
+        {
+            "level": 22,
+            "extreme": 45,
+            "high": 42,
+            "moderate": 37,
+            "low": "35 to 31"
+        },
+        {
+            "level": 23,
+            "extreme": 46,
+            "high": 43,
+            "moderate": 38,
+            "low": "36 to 32"
+        },
+        {
+            "level": 24,
+            "extreme": 48,
+            "high": 45,
+            "moderate": 40,
+            "low": "38 to 33"
+        }
+    ],
+    "armorClassScales": [
+        {
+            "level": -1,
+            "extreme": 18,
+            "high": 15,
+            "moderate": 14,
+            "low": 12
+        },
+        {
+            "level": 0,
+            "extreme": 19,
+            "high": 16,
+            "moderate": 15,
+            "low": 13
+        },
+        {
+            "level": 1,
+            "extreme": 19,
+            "high": 16,
+            "moderate": 15,
+            "low": 13
+        },
+        {
+            "level": 2,
+            "extreme": 21,
+            "high": 18,
+            "moderate": 17,
+            "low": 15
+        },
+        {
+            "level": 3,
+            "extreme": 22,
+            "high": 19,
+            "moderate": 18,
+            "low": 16
+        },
+        {
+            "level": 4,
+            "extreme": 24,
+            "high": 21,
+            "moderate": 20,
+            "low": 18
+        },
+        {
+            "level": 5,
+            "extreme": 25,
+            "high": 22,
+            "moderate": 21,
+            "low": 19
+        },
+        {
+            "level": 6,
+            "extreme": 27,
+            "high": 24,
+            "moderate": 23,
+            "low": 21
+        },
+        {
+            "level": 7,
+            "extreme": 28,
+            "high": 25,
+            "moderate": 24,
+            "low": 22
+        },
+        {
+            "level": 8,
+            "extreme": 30,
+            "high": 27,
+            "moderate": 26,
+            "low": 24
+        },
+        {
+            "level": 9,
+            "extreme": 31,
+            "high": 28,
+            "moderate": 27,
+            "low": 25
+        },
+        {
+            "level": 10,
+            "extreme": 33,
+            "high": 30,
+            "moderate": 29,
+            "low": 27
+        },
+        {
+            "level": 11,
+            "extreme": 34,
+            "high": 31,
+            "moderate": 30,
+            "low": 28
+        },
+        {
+            "level": 12,
+            "extreme": 36,
+            "high": 33,
+            "moderate": 32,
+            "low": 30
+        },
+        {
+            "level": 13,
+            "extreme": 37,
+            "high": 34,
+            "moderate": 33,
+            "low": 31
+        },
+        {
+            "level": 14,
+            "extreme": 39,
+            "high": 36,
+            "moderate": 35,
+            "low": 33
+        },
+        {
+            "level": 15,
+            "extreme": 40,
+            "high": 37,
+            "moderate": 36,
+            "low": 34
+        },
+        {
+            "level": 16,
+            "extreme": 42,
+            "high": 39,
+            "moderate": 38,
+            "low": 36
+        },
+        {
+            "level": 17,
+            "extreme": 43,
+            "high": 40,
+            "moderate": 39,
+            "low": 37
+        },
+        {
+            "level": 18,
+            "extreme": 45,
+            "high": 42,
+            "moderate": 41,
+            "low": 39
+        },
+        {
+            "level": 19,
+            "extreme": 46,
+            "high": 43,
+            "moderate": 42,
+            "low": 40
+        },
+        {
+            "level": 20,
+            "extreme": 48,
+            "high": 45,
+            "moderate": 44,
+            "low": 42
+        },
+        {
+            "level": 21,
+            "extreme": 49,
+            "high": 46,
+            "moderate": 45,
+            "low": 43
+        },
+        {
+            "level": 22,
+            "extreme": 51,
+            "high": 48,
+            "moderate": 47,
+            "low": 45
+        },
+        {
+            "level": 23,
+            "extreme": 52,
+            "high": 49,
+            "moderate": 48,
+            "low": 46
+        },
+        {
+            "level": 24,
+            "extreme": 54,
+            "high": 51,
+            "moderate": 50,
+            "low": 48
+        }
+    ],
+    "savingThrowScales": [
+        {
+            "level": -1,
+            "extreme": 9,
+            "high": 8,
+            "moderate": 5,
+            "low": 2,
+            "terrible": 0
+        },
+        {
+            "level": 0,
+            "extreme": 10,
+            "high": 9,
+            "moderate": 6,
+            "low": 3,
+            "terrible": 1
+        },
+        {
+            "level": 1,
+            "extreme": 11,
+            "high": 10,
+            "moderate": 7,
+            "low": 4,
+            "terrible": 2
+        },
+        {
+            "level": 2,
+            "extreme": 12,
+            "high": 11,
+            "moderate": 8,
+            "low": 5,
+            "terrible": 3
+        },
+        {
+            "level": 3,
+            "extreme": 14,
+            "high": 12,
+            "moderate": 9,
+            "low": 6,
+            "terrible": 4
+        },
+        {
+            "level": 4,
+            "extreme": 15,
+            "high": 14,
+            "moderate": 11,
+            "low": 8,
+            "terrible": 6
+        },
+        {
+            "level": 5,
+            "extreme": 17,
+            "high": 15,
+            "moderate": 12,
+            "low": 9,
+            "terrible": 7
+        },
+        {
+            "level": 6,
+            "extreme": 18,
+            "high": 17,
+            "moderate": 14,
+            "low": 11,
+            "terrible": 8
+        },
+        {
+            "level": 7,
+            "extreme": 20,
+            "high": 18,
+            "moderate": 15,
+            "low": 12,
+            "terrible": 10
+        },
+        {
+            "level": 8,
+            "extreme": 21,
+            "high": 19,
+            "moderate": 16,
+            "low": 13,
+            "terrible": 11
+        },
+        {
+            "level": 9,
+            "extreme": 23,
+            "high": 21,
+            "moderate": 18,
+            "low": 15,
+            "terrible": 12
+        },
+        {
+            "level": 10,
+            "extreme": 24,
+            "high": 22,
+            "moderate": 19,
+            "low": 16,
+            "terrible": 14
+        },
+        {
+            "level": 11,
+            "extreme": 26,
+            "high": 24,
+            "moderate": 21,
+            "low": 18,
+            "terrible": 15
+        },
+        {
+            "level": 12,
+            "extreme": 27,
+            "high": 25,
+            "moderate": 22,
+            "low": 19,
+            "terrible": 16
+        },
+        {
+            "level": 13,
+            "extreme": 29,
+            "high": 26,
+            "moderate": 23,
+            "low": 20,
+            "terrible": 18
+        },
+        {
+            "level": 14,
+            "extreme": 30,
+            "high": 28,
+            "moderate": 25,
+            "low": 22,
+            "terrible": 19
+        },
+        {
+            "level": 15,
+            "extreme": 32,
+            "high": 29,
+            "moderate": 26,
+            "low": 23,
+            "terrible": 20
+        },
+        {
+            "level": 16,
+            "extreme": 33,
+            "high": 30,
+            "moderate": 28,
+            "low": 25,
+            "terrible": 22
+        },
+        {
+            "level": 17,
+            "extreme": 35,
+            "high": 32,
+            "moderate": 29,
+            "low": 26,
+            "terrible": 23
+        },
+        {
+            "level": 18,
+            "extreme": 36,
+            "high": 33,
+            "moderate": 30,
+            "low": 27,
+            "terrible": 24
+        },
+        {
+            "level": 19,
+            "extreme": 38,
+            "high": 35,
+            "moderate": 32,
+            "low": 29,
+            "terrible": 26
+        },
+        {
+            "level": 20,
+            "extreme": 39,
+            "high": 36,
+            "moderate": 33,
+            "low": 30,
+            "terrible": 27
+        },
+        {
+            "level": 21,
+            "extreme": 41,
+            "high": 38,
+            "moderate": 35,
+            "low": 32,
+            "terrible": 28
+        },
+        {
+            "level": 22,
+            "extreme": 43,
+            "high": 39,
+            "moderate": 36,
+            "low": 33,
+            "terrible": 30
+        },
+        {
+            "level": 23,
+            "extreme": 44,
+            "high": 40,
+            "moderate": 37,
+            "low": 34,
+            "terrible": 31
+        },
+        {
+            "level": 24,
+            "extreme": 46,
+            "high": 42,
+            "moderate": 38,
+            "low": 36,
+            "terrible": 32
+        }
+    ],
+    "hitPointsScales": [
+        {
+            "level": -1,
+            "high": 9,
+            "moderate": "8–7",
+            "low": "6–5"
+        },
+        {
+            "level": 0,
+            "high": "20–17",
+            "moderate": "16–14",
+            "low": "13–11"
+        },
+        {
+            "level": 1,
+            "high": "26–24",
+            "moderate": "21–19",
+            "low": "16–14"
+        },
+        {
+            "level": 2,
+            "high": "40–36",
+            "moderate": "32–28",
+            "low": "25–21"
+        },
+        {
+            "level": 3,
+            "high": "59–53",
+            "moderate": "48–42",
+            "low": "37–31"
+        },
+        {
+            "level": 4,
+            "high": "78–72",
+            "moderate": "63–57",
+            "low": "48–42"
+        },
+        {
+            "level": 5,
+            "high": "97–91",
+            "moderate": "78–72",
+            "low": "59–53"
+        },
+        {
+            "level": 6,
+            "high": "123–115",
+            "moderate": "99–91",
+            "low": "75–67"
+        },
+        {
+            "level": 7,
+            "high": "148–140",
+            "moderate": "119–111",
+            "low": "90–82"
+        },
+        {
+            "level": 8,
+            "high": "173–165",
+            "moderate": "139–131",
+            "low": "105–97"
+        },
+        {
+            "level": 9,
+            "high": "198–190",
+            "moderate": "159–151",
+            "low": "120–112"
+        },
+        {
+            "level": 10,
+            "high": "223–215",
+            "moderate": "179–171",
+            "low": "135–127"
+        },
+        {
+            "level": 11,
+            "high": "248–240",
+            "moderate": "199–191",
+            "low": "150–142"
+        },
+        {
+            "level": 12,
+            "high": "273–265",
+            "moderate": "219–211",
+            "low": "165–157"
+        },
+        {
+            "level": 13,
+            "high": "298–290",
+            "moderate": "239–231",
+            "low": "180–172"
+        },
+        {
+            "level": 14,
+            "high": "323–315",
+            "moderate": "259–251",
+            "low": "195–187"
+        },
+        {
+            "level": 15,
+            "high": "348–340",
+            "moderate": "279–271",
+            "low": "210–202"
+        },
+        {
+            "level": 16,
+            "high": "373–365",
+            "moderate": "299–291",
+            "low": "225–217"
+        },
+        {
+            "level": 17,
+            "high": "398–390",
+            "moderate": "319–311",
+            "low": "240–232"
+        },
+        {
+            "level": 18,
+            "high": "423–415",
+            "moderate": "339–331",
+            "low": "255–247"
+        },
+        {
+            "level": 19,
+            "high": "448–440",
+            "moderate": "359–351",
+            "low": "270–262"
+        },
+        {
+            "level": 20,
+            "high": "473–465",
+            "moderate": "379–371",
+            "low": "285–277"
+        },
+        {
+            "level": 21,
+            "high": "505–495",
+            "moderate": "405–395",
+            "low": "305–295"
+        },
+        {
+            "level": 22,
+            "high": "544–532",
+            "moderate": "436–424",
+            "low": "329–317"
+        },
+        {
+            "level": 23,
+            "high": "581–569",
+            "moderate": "466–454",
+            "low": "351–339"
+        },
+        {
+            "level": 24,
+            "high": "633–617",
+            "moderate": "508–492",
+            "low": "383–367"
+        }
+    ],
+    "resistancesAndWeaknesses": [
+        {
+            "level": -1,
+            "maximum": 1,
+            "minimum": 1
+        },
+        {
+            "level": 0,
+            "maximum": 3,
+            "minimum": 1
+        },
+        {
+            "level": 1,
+            "maximum": 3,
+            "minimum": 2
+        },
+        {
+            "level": 2,
+            "maximum": 5,
+            "minimum": 2
+        },
+        {
+            "level": 3,
+            "maximum": 6,
+            "minimum": 3
+        },
+        {
+            "level": 4,
+            "maximum": 7,
+            "minimum": 4
+        },
+        {
+            "level": 5,
+            "maximum": 8,
+            "minimum": 4
+        },
+        {
+            "level": 6,
+            "maximum": 9,
+            "minimum": 5
+        },
+        {
+            "level": 7,
+            "maximum": 10,
+            "minimum": 5
+        },
+        {
+            "level": 8,
+            "maximum": 11,
+            "minimum": 6
+        },
+        {
+            "level": 9,
+            "maximum": 12,
+            "minimum": 6
+        },
+        {
+            "level": 10,
+            "maximum": 13,
+            "minimum": 7
+        },
+        {
+            "level": 11,
+            "maximum": 14,
+            "minimum": 7
+        },
+        {
+            "level": 12,
+            "maximum": 15,
+            "minimum": 8
+        },
+        {
+            "level": 13,
+            "maximum": 16,
+            "minimum": 8
+        },
+        {
+            "level": 14,
+            "maximum": 17,
+            "minimum": 9
+        },
+        {
+            "level": 15,
+            "maximum": 18,
+            "minimum": 9
+        },
+        {
+            "level": 16,
+            "maximum": 19,
+            "minimum": 9
+        },
+        {
+            "level": 17,
+            "maximum": 19,
+            "minimum": 10
+        },
+        {
+            "level": 18,
+            "maximum": 20,
+            "minimum": 10
+        },
+        {
+            "level": 19,
+            "maximum": 21,
+            "minimum": 11
+        },
+        {
+            "level": 20,
+            "maximum": 22,
+            "minimum": 11
+        },
+        {
+            "level": 21,
+            "maximum": 23,
+            "minimum": 12
+        },
+        {
+            "level": 22,
+            "maximum": 24,
+            "minimum": 12
+        },
+        {
+            "level": 23,
+            "maximum": 25,
+            "minimum": 13
+        },
+        {
+            "level": 24,
+            "maximum": 26,
+            "minimum": 13
+        }
+    ],
+    "strikeAttackBonusScales": [
+        {
+            "level": -1,
+            "extreme": 10,
+            "high": 8,
+            "moderate": 6,
+            "low": 4
+        },
+        {
+            "level": 0,
+            "extreme": 10,
+            "high": 8,
+            "moderate": 6,
+            "low": 4
+        },
+        {
+            "level": 1,
+            "extreme": 11,
+            "high": 9,
+            "moderate": 7,
+            "low": 5
+        },
+        {
+            "level": 2,
+            "extreme": 13,
+            "high": 11,
+            "moderate": 9,
+            "low": 7
+        },
+        {
+            "level": 3,
+            "extreme": 14,
+            "high": 12,
+            "moderate": 10,
+            "low": 8
+        },
+        {
+            "level": 4,
+            "extreme": 16,
+            "high": 14,
+            "moderate": 12,
+            "low": 9
+        },
+        {
+            "level": 5,
+            "extreme": 17,
+            "high": 15,
+            "moderate": 13,
+            "low": 11
+        },
+        {
+            "level": 6,
+            "extreme": 19,
+            "high": 17,
+            "moderate": 15,
+            "low": 12
+        },
+        {
+            "level": 7,
+            "extreme": 20,
+            "high": 18,
+            "moderate": 16,
+            "low": 13
+        },
+        {
+            "level": 8,
+            "extreme": 22,
+            "high": 20,
+            "moderate": 18,
+            "low": 15
+        },
+        {
+            "level": 9,
+            "extreme": 23,
+            "high": 21,
+            "moderate": 19,
+            "low": 16
+        },
+        {
+            "level": 10,
+            "extreme": 25,
+            "high": 23,
+            "moderate": 21,
+            "low": 17
+        },
+        {
+            "level": 11,
+            "extreme": 27,
+            "high": 24,
+            "moderate": 22,
+            "low": 19
+        },
+        {
+            "level": 12,
+            "extreme": 28,
+            "high": 26,
+            "moderate": 24,
+            "low": 20
+        },
+        {
+            "level": 13,
+            "extreme": 29,
+            "high": 27,
+            "moderate": 25,
+            "low": 21
+        },
+        {
+            "level": 14,
+            "extreme": 31,
+            "high": 29,
+            "moderate": 27,
+            "low": 23
+        },
+        {
+            "level": 15,
+            "extreme": 32,
+            "high": 30,
+            "moderate": 28,
+            "low": 24
+        },
+        {
+            "level": 16,
+            "extreme": 34,
+            "high": 32,
+            "moderate": 30,
+            "low": 25
+        },
+        {
+            "level": 17,
+            "extreme": 35,
+            "high": 33,
+            "moderate": 31,
+            "low": 27
+        },
+        {
+            "level": 18,
+            "extreme": 37,
+            "high": 35,
+            "moderate": 33,
+            "low": 28
+        },
+        {
+            "level": 19,
+            "extreme": 38,
+            "high": 36,
+            "moderate": 34,
+            "low": 29
+        },
+        {
+            "level": 20,
+            "extreme": 40,
+            "high": 38,
+            "moderate": 36,
+            "low": 31
+        },
+        {
+            "level": 21,
+            "extreme": 41,
+            "high": 39,
+            "moderate": 37,
+            "low": 32
+        },
+        {
+            "level": 22,
+            "extreme": 43,
+            "high": 41,
+            "moderate": 39,
+            "low": 33
+        },
+        {
+            "level": 23,
+            "extreme": 44,
+            "high": 42,
+            "moderate": 40,
+            "low": 35
+        },
+        {
+            "level": 24,
+            "extreme": 46,
+            "high": 44,
+            "moderate": 42,
+            "low": 36
+        }
+    ],
+    "strikeDamageScales": [
+        {
+            "level": -1,
+            "extreme": "1d6+1 (4)",
+            "high": "1d4+1 (3)",
+            "moderate": "1d4 (3)",
+            "low": "1d4 (2)"
+        },
+        {
+            "level": 0,
+            "extreme": "1d6+3 (6)",
+            "high": "1d6+2 (5)",
+            "moderate": "1d4+2 (4)",
+            "low": "1d4+1 (3)"
+        },
+        {
+            "level": 1,
+            "extreme": "1d8+4 (8)",
+            "high": "1d6+3 (6)",
+            "moderate": "1d6+2 (5)",
+            "low": "1d4+2 (4)"
+        },
+        {
+            "level": 2,
+            "extreme": "1d12+4 (11)",
+            "high": "1d10+4 (9)",
+            "moderate": "1d8+4 (8)",
+            "low": "1d6+3 (6)"
+        },
+        {
+            "level": 3,
+            "extreme": "1d12+8 (15)",
+            "high": "1d10+6 (12)",
+            "moderate": "1d8+6 (10)",
+            "low": "1d6+5 (8)"
+        },
+        {
+            "level": 4,
+            "extreme": "2d10+7 (18)",
+            "high": "2d8+5 (14)",
+            "moderate": "2d6+5 (12)",
+            "low": "2d4+4 (9)"
+        },
+        {
+            "level": 5,
+            "extreme": "2d12+7 (20)",
+            "high": "2d8+7 (16)",
+            "moderate": "2d6+6 (13)",
+            "low": "2d4+6 (11)"
+        },
+        {
+            "level": 6,
+            "extreme": "2d12+10 (23)",
+            "high": "2d8+9 (18)",
+            "moderate": "2d6+8 (15)",
+            "low": "2d4+7 (12)"
+        },
+        {
+            "level": 7,
+            "extreme": "2d12+12 (25)",
+            "high": "2d10+9 (20)",
+            "moderate": "2d8+8 (17)",
+            "low": "2d6+6 (13)"
+        },
+        {
+            "level": 8,
+            "extreme": "2d12+15 (28)",
+            "high": "2d10+11 (22)",
+            "moderate": "2d8+9 (18)",
+            "low": "2d6+8 (15)"
+        },
+        {
+            "level": 9,
+            "extreme": "2d12+17 (30)",
+            "high": "2d10+13 (24)",
+            "moderate": "2d8+11 (20)",
+            "low": "2d6+9 (16)"
+        },
+        {
+            "level": 10,
+            "extreme": "2d12+20 (33)",
+            "high": "2d12+13 (26)",
+            "moderate": "2d10+11 (22)",
+            "low": "2d6+10 (17)"
+        },
+        {
+            "level": 11,
+            "extreme": "2d12+22 (35)",
+            "high": "2d12+15 (28)",
+            "moderate": "2d10+12 (23)",
+            "low": "2d8+10 (19)"
+        },
+        {
+            "level": 12,
+            "extreme": "3d12+19 (38)",
+            "high": "3d10+14 (30)",
+            "moderate": "3d8+12 (25)",
+            "low": "3d6+10 (20)"
+        },
+        {
+            "level": 13,
+            "extreme": "3d12+21 (40)",
+            "high": "3d10+16 (32)",
+            "moderate": "3d8+14 (27)",
+            "low": "3d6+11 (21)"
+        },
+        {
+            "level": 14,
+            "extreme": "3d12+24 (43)",
+            "high": "3d10+18 (34)",
+            "moderate": "3d8+15 (28)",
+            "low": "3d6+13 (23)"
+        },
+        {
+            "level": 15,
+            "extreme": "3d12+26 (45)",
+            "high": "3d12+17 (36)",
+            "moderate": "3d10+14 (30)",
+            "low": "3d6+14 (24)"
+        },
+        {
+            "level": 16,
+            "extreme": "3d12+29 (48)",
+            "high": "3d12+18 (37)",
+            "moderate": "3d10+15 (31)",
+            "low": "3d6+15 (25)"
+        },
+        {
+            "level": 17,
+            "extreme": "3d12+31 (50)",
+            "high": "3d12+19 (38)",
+            "moderate": "3d10+16 (32)",
+            "low": "3d6+16 (26)"
+        },
+        {
+            "level": 18,
+            "extreme": "3d12+34 (53)",
+            "high": "3d12+20 (40)",
+            "moderate": "3d10+17 (33)",
+            "low": "3d6+17 (27)"
+        },
+        {
+            "level": 19,
+            "extreme": "4d12+29 (55)",
+            "high": "4d10+20 (42)",
+            "moderate": "4d8+17 (35)",
+            "low": "4d6+14 (28)"
+        },
+        {
+            "level": 20,
+            "extreme": "4d12+32 (58)",
+            "high": "4d10+22 (44)",
+            "moderate": "4d8+19 (37)",
+            "low": "4d6+15 (29)"
+        },
+        {
+            "level": 21,
+            "extreme": "4d12+34 (60)",
+            "high": "4d10+24 (46)",
+            "moderate": "4d8+20 (38)",
+            "low": "4d6+17 (31)"
+        },
+        {
+            "level": 22,
+            "extreme": "4d12+37 (63)",
+            "high": "4d10+26 (48)",
+            "moderate": "4d8+22 (40)",
+            "low": "4d6+18 (32)"
+        },
+        {
+            "level": 23,
+            "extreme": "4d12+39 (65)",
+            "high": "4d12+24 (50)",
+            "moderate": "4d10+20 (42)",
+            "low": "4d6+19 (33)"
+        },
+        {
+            "level": 24,
+            "extreme": "4d12+42 (68)",
+            "high": "4d12+26 (52)",
+            "moderate": "4d10+22 (44)",
+            "low": "4d6+21 (35)"
+        }
+    ],
+    "spellDcAndAttackBonusScales": [
+        {
+            "level": -1,
+            "extremeDc": 19,
+            "extremeSpellAttackBonus": 11,
+            "highDc": 16,
+            "highSpellAttackBonus": 8,
+            "moderateDc": 13,
+            "moderateSpellAttackBonus": 5
+        },
+        {
+            "level": 0,
+            "extremeDc": 19,
+            "extremeSpellAttackBonus": 11,
+            "highDc": 16,
+            "highSpellAttackBonus": 8,
+            "moderateDc": 13,
+            "moderateSpellAttackBonus": 5
+        },
+        {
+            "level": 1,
+            "extremeDc": 20,
+            "extremeSpellAttackBonus": 12,
+            "highDc": 17,
+            "highSpellAttackBonus": 9,
+            "moderateDc": 14,
+            "moderateSpellAttackBonus": 6
+        },
+        {
+            "level": 2,
+            "extremeDc": 22,
+            "extremeSpellAttackBonus": 14,
+            "highDc": 18,
+            "highSpellAttackBonus": 10,
+            "moderateDc": 15,
+            "moderateSpellAttackBonus": 7
+        },
+        {
+            "level": 3,
+            "extremeDc": 23,
+            "extremeSpellAttackBonus": 15,
+            "highDc": 20,
+            "highSpellAttackBonus": 12,
+            "moderateDc": 17,
+            "moderateSpellAttackBonus": 9
+        },
+        {
+            "level": 4,
+            "extremeDc": 25,
+            "extremeSpellAttackBonus": 17,
+            "highDc": 21,
+            "highSpellAttackBonus": 13,
+            "moderateDc": 18,
+            "moderateSpellAttackBonus": 10
+        },
+        {
+            "level": 5,
+            "extremeDc": 26,
+            "extremeSpellAttackBonus": 18,
+            "highDc": 22,
+            "highSpellAttackBonus": 14,
+            "moderateDc": 19,
+            "moderateSpellAttackBonus": 11
+        },
+        {
+            "level": 6,
+            "extremeDc": 27,
+            "extremeSpellAttackBonus": 19,
+            "highDc": 24,
+            "highSpellAttackBonus": 16,
+            "moderateDc": 21,
+            "moderateSpellAttackBonus": 13
+        },
+        {
+            "level": 7,
+            "extremeDc": 29,
+            "extremeSpellAttackBonus": 21,
+            "highDc": 25,
+            "highSpellAttackBonus": 17,
+            "moderateDc": 22,
+            "moderateSpellAttackBonus": 14
+        },
+        {
+            "level": 8,
+            "extremeDc": 30,
+            "extremeSpellAttackBonus": 22,
+            "highDc": 26,
+            "highSpellAttackBonus": 18,
+            "moderateDc": 23,
+            "moderateSpellAttackBonus": 15
+        },
+        {
+            "level": 9,
+            "extremeDc": 32,
+            "extremeSpellAttackBonus": 24,
+            "highDc": 28,
+            "highSpellAttackBonus": 20,
+            "moderateDc": 25,
+            "moderateSpellAttackBonus": 17
+        },
+        {
+            "level": 10,
+            "extremeDc": 33,
+            "extremeSpellAttackBonus": 25,
+            "highDc": 29,
+            "highSpellAttackBonus": 21,
+            "moderateDc": 26,
+            "moderateSpellAttackBonus": 18
+        },
+        {
+            "level": 11,
+            "extremeDc": 34,
+            "extremeSpellAttackBonus": 26,
+            "highDc": 30,
+            "highSpellAttackBonus": 22,
+            "moderateDc": 27,
+            "moderateSpellAttackBonus": 19
+        },
+        {
+            "level": 12,
+            "extremeDc": 36,
+            "extremeSpellAttackBonus": 28,
+            "highDc": 32,
+            "highSpellAttackBonus": 24,
+            "moderateDc": 29,
+            "moderateSpellAttackBonus": 21
+        },
+        {
+            "level": 13,
+            "extremeDc": 37,
+            "extremeSpellAttackBonus": 29,
+            "highDc": 33,
+            "highSpellAttackBonus": 25,
+            "moderateDc": 30,
+            "moderateSpellAttackBonus": 22
+        },
+        {
+            "level": 14,
+            "extremeDc": 39,
+            "extremeSpellAttackBonus": 31,
+            "highDc": 34,
+            "highSpellAttackBonus": 26,
+            "moderateDc": 31,
+            "moderateSpellAttackBonus": 23
+        },
+        {
+            "level": 15,
+            "extremeDc": 40,
+            "extremeSpellAttackBonus": 32,
+            "highDc": 36,
+            "highSpellAttackBonus": 28,
+            "moderateDc": 33,
+            "moderateSpellAttackBonus": 25
+        },
+        {
+            "level": 16,
+            "extremeDc": 41,
+            "extremeSpellAttackBonus": 33,
+            "highDc": 37,
+            "highSpellAttackBonus": 29,
+            "moderateDc": 34,
+            "moderateSpellAttackBonus": 26
+        },
+        {
+            "level": 17,
+            "extremeDc": 43,
+            "extremeSpellAttackBonus": 35,
+            "highDc": 38,
+            "highSpellAttackBonus": 30,
+            "moderateDc": 35,
+            "moderateSpellAttackBonus": 27
+        },
+        {
+            "level": 18,
+            "extremeDc": 44,
+            "extremeSpellAttackBonus": 36,
+            "highDc": 40,
+            "highSpellAttackBonus": 32,
+            "moderateDc": 37,
+            "moderateSpellAttackBonus": 29
+        },
+        {
+            "level": 19,
+            "extremeDc": 46,
+            "extremeSpellAttackBonus": 38,
+            "highDc": 41,
+            "highSpellAttackBonus": 33,
+            "moderateDc": 38,
+            "moderateSpellAttackBonus": 30
+        },
+        {
+            "level": 20,
+            "extremeDc": 47,
+            "extremeSpellAttackBonus": 39,
+            "highDc": 42,
+            "highSpellAttackBonus": 34,
+            "moderateDc": 39,
+            "moderateSpellAttackBonus": 31
+        },
+        {
+            "level": 21,
+            "extremeDc": 48,
+            "extremeSpellAttackBonus": 40,
+            "highDc": 44,
+            "highSpellAttackBonus": 36,
+            "moderateDc": 41,
+            "moderateSpellAttackBonus": 33
+        },
+        {
+            "level": 22,
+            "extremeDc": 50,
+            "extremeSpellAttackBonus": 42,
+            "highDc": 45,
+            "highSpellAttackBonus": 37,
+            "moderateDc": 42,
+            "moderateSpellAttackBonus": 34
+        },
+        {
+            "level": 23,
+            "extremeDc": 51,
+            "extremeSpellAttackBonus": 43,
+            "highDc": 46,
+            "highSpellAttackBonus": 38,
+            "moderateDc": 43,
+            "moderateSpellAttackBonus": 35
+        },
+        {
+            "level": 24,
+            "extremeDc": 52,
+            "extremeSpellAttackBonus": 44,
+            "highDc": 48,
+            "highSpellAttackBonus": 40,
+            "moderateDc": 45,
+            "moderateSpellAttackBonus": 37
+        }
+    ],
+    "safeWeapons": [
+        {
+            "creatureLevel": "6",
+            "safeItemLevel": "2 (+1 weapon)"
+        },
+        {
+            "creatureLevel": "8",
+            "safeItemLevel": "4 (+1 striking weapon)"
+        },
+        {
+            "creatureLevel": "14",
+            "safeItemLevel": "10 (+2 striking weapon)"
+        },
+        {
+            "creatureLevel": "16",
+            "safeItemLevel": "12 (+2 greater striking weapon)"
+        },
+        {
+            "creatureLevel": "20",
+            "safeItemLevel": "16 (+3 greater striking weapon)"
+        },
+        {
+            "creatureLevel": "23",
+            "safeItemLevel": "19 (+3 major striking weapon)"
+        }
+    ],
+    "safeArmor": [
+        {
+            "creatureLevel": "9",
+            "safeItemLevel": "5 (+1 armor)"
+        },
+        {
+            "creatureLevel": "12",
+            "safeItemLevel": "8 (+1 resilient armor)"
+        },
+        {
+            "creatureLevel": "15",
+            "safeItemLevel": "11 (+2 resilient armor)"
+        },
+        {
+            "creatureLevel": "18",
+            "safeItemLevel": "14 (+2 greater resilient armor)"
+        },
+        {
+            "creatureLevel": "22",
+            "safeItemLevel": "18 (+3 greater resilient armor)"
+        },
+        {
+            "creatureLevel": "24",
+            "safeItemLevel": "20 (+3 major resilient armor)"
+        }
+    ],
+    "weaponData": [
+        {
+            "name": "Fist",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Nonlethal, Unarmed",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Battle Lute",
+            "weapon_type": "Melee",
+            "trait": "Shove, Two-Hand 1d8, Uncommon",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Clan Dagger",
+            "weapon_type": "Melee",
+            "trait": "Agile, Dwarf, Parry, Uncommon, Versatile B",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Club",
+            "weapon_type": "Melee",
+            "trait": "Thrown 10 ft.",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Corset Knife",
+            "weapon_type": "Melee",
+            "trait": "Agile, Concealable, Finesse, Thrown 10 ft.",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Dagger",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Thrown 10 ft., Versatile S",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Forked Bipod",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d6, Finesse",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Frying Pan",
+            "weapon_type": "Melee",
+            "trait": "Fatal d8, Halfling",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Gauntlet",
+            "weapon_type": "Melee",
+            "trait": "Agile, Free-Hand",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Juggling Club",
+            "weapon_type": "Melee",
+            "trait": "Agile, Nonlethal, Thrown 20 ft., Uncommon",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Katar",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d6, Monk, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Knuckle Duster",
+            "weapon_type": "Melee",
+            "trait": "Agile, Free-Hand, Monk",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Light Mace",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Shove",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Longspear",
+            "weapon_type": "Melee",
+            "trait": "Reach",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Mace",
+            "weapon_type": "Melee",
+            "trait": "Shove",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Morningstar",
+            "weapon_type": "Melee",
+            "trait": "Versatile P",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Nightstick",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Nonlethal, Parry, Uncommon",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Poi",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backswing, Finesse, Nonlethal, Uncommon",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Reinforced Frame",
+            "weapon_type": "Melee",
+            "trait": "Agile, Attached, Free-Hand",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Shears",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Finesse, Uncommon, Versatile P",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Sickle",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Trip",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Spear",
+            "weapon_type": "Melee",
+            "trait": "Monk, Thrown 20 ft.",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Spiked Gauntlet",
+            "weapon_type": "Melee",
+            "trait": "Agile, Free-Hand",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Staff",
+            "weapon_type": "Melee",
+            "trait": "Monk, Two-Hand 1d8",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Stiletto Pen",
+            "weapon_type": "Melee",
+            "trait": "Agile, Concealable, Finesse, Thrown 10 ft., Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Throwing Knife",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Thrown 20 ft.",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Thundermace",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Uncommon",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Tri-Bladed Katar",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Fatal d8, Monk, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Wheel Blades",
+            "weapon_type": "Melee",
+            "trait": "Agile, Attached, Free-Hand",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Wheel Spikes",
+            "weapon_type": "Melee",
+            "trait": "Agile, Attached, Free-Hand",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Adze",
+            "weapon_type": "Melee",
+            "trait": "Forceful, Grippli, Sweep",
+            "damage": "1d10 S",
+            "range": ""
+        },
+        {
+            "name": "Asp Coil",
+            "weapon_type": "Melee",
+            "trait": "Reach, Uncommon, Versatile P",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Axe Musket",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Forceful, Sweep, Uncommon, Combination, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Bastard Sword",
+            "weapon_type": "Melee",
+            "trait": "Two-Hand 1d12",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Battle Axe",
+            "weapon_type": "Melee",
+            "trait": "Sweep",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Battle Saddle",
+            "weapon_type": "Melee",
+            "trait": "Parry, Sweep, Vehicular",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Bayonet",
+            "weapon_type": "Melee",
+            "trait": "Agile, Attached to crossbow or firearm, Finesse",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Bec de Corbin",
+            "weapon_type": "Melee",
+            "trait": "Razing, Reach, Shove, Versatile B",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Black Powder Knuckle Dusters",
+            "weapon_type": "Melee",
+            "trait": "Agile, Critical Fusion, Monk, Uncommon, Combination, Uncommon",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Bladed Gauntlet",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Free-Hand, Modular B, P, or S, Uncommon",
+            "damage": "1d4 modular",
+            "range": ""
+        },
+        {
+            "name": "Bladed Scarf",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Reach, Sweep, Trip, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Bo Staff",
+            "weapon_type": "Melee",
+            "trait": "Monk, Parry, Reach, Trip",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Boarding Axe",
+            "weapon_type": "Melee",
+            "trait": "Agile, Azarketi, Climbing, Uncommon, Versatile P",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Boarding Pike",
+            "weapon_type": "Melee",
+            "trait": "Reach, Shove, Uncommon",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Bow Staff",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Monk, Parry, Sweep, Combination",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Breaching Pike",
+            "weapon_type": "Melee",
+            "trait": "Hobgoblin, Razing, Reach, Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Buugeng",
+            "weapon_type": "Melee",
+            "trait": "Agile, Conrasu, Sweep, Twin, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Cane Pistol",
+            "weapon_type": "Melee",
+            "trait": "Concealable, Critical Fusion, Thrown 10 ft., Uncommon, Combination, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Claw Blade",
+            "weapon_type": "Melee",
+            "trait": "Agile, Catfolk, Deadly d8, Disarm, Finesse, Uncommon, Versatile P",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Combat Grapnel",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Grapple, Tethered, Thrown 20 ft., Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Combat Lure",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Tethered, Thrown 20 ft., Training, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Crescent Cross",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Parry, Combination",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Dagger Pistol",
+            "weapon_type": "Melee",
+            "trait": "Agile, Critical Fusion, Finesse, Thrown 10 ft., Uncommon, Versatile S, Combination, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Dancer's Spear",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Finesse, Reach, Sweep, Versatile B",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Dandpatta",
+            "weapon_type": "Melee",
+            "trait": "Agile, Twin, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Dogslicer",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backstabber, Finesse, Goblin, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Dueling Spear",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Uncommon, Versatile S",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Earthbreaker",
+            "weapon_type": "Melee",
+            "trait": "Razing, Shove, Two-Hand d10, Versatile P",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Elven Branched Spear",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Elf, Finesse, Reach, Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Elven Curve Blade",
+            "weapon_type": "Melee",
+            "trait": "Elf, Finesse, Forceful, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Exquisite Sword Cane",
+            "weapon_type": "Melee",
+            "trait": "Agile, Concealable, Finesse, Parry, Twin (Sheath)",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Exquisite Sword Cane Sheath",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Parry, Twin (Sword)",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Falchion",
+            "weapon_type": "Melee",
+            "trait": "Forceful, Sweep",
+            "damage": "1d10 S",
+            "range": ""
+        },
+        {
+            "name": "Fangwire",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backstabber, Deadly d8, Finesse, Grapple, Kobold, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Fauchard",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Reach, Sweep, Trip",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Fighting Fan",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backstabber, Deadly d6, Finesse, Monk, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Fighting Stick",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Halfling, Nonlethal, Shove, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Filcher's Fork",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backstabber, Deadly d6, Finesse, Halfling, Thrown 20 ft., Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Flail",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Sweep, Trip",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Flyssa",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Versatile P",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Gaff",
+            "weapon_type": "Melee",
+            "trait": "Trip, Versatile P",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Gill Hook",
+            "weapon_type": "Melee",
+            "trait": "Azarketi, Grapple, Reach, Uncommon",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Glaive",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Forceful, Reach",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Gnome Amalgam Musket",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Critical Fusion, Gnome, Trip, Uncommon, Versatile P, Combination, Uncommon",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Gnome Hooked Hammer",
+            "weapon_type": "Melee",
+            "trait": "Gnome, Trip, Two-Hand 1d10, Uncommon, Versatile P",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Greataxe",
+            "weapon_type": "Melee",
+            "trait": "Sweep",
+            "damage": "1d12 S",
+            "range": ""
+        },
+        {
+            "name": "Greatclub",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Shove",
+            "damage": "1d10 B",
+            "range": ""
+        },
+        {
+            "name": "Greatpick",
+            "weapon_type": "Melee",
+            "trait": "Fatal 1d12",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Greatsword",
+            "weapon_type": "Melee",
+            "trait": "Versatile P",
+            "damage": "1d12 S",
+            "range": ""
+        },
+        {
+            "name": "Griffon Cane",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Two-Hand d10",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Guisarme",
+            "weapon_type": "Melee",
+            "trait": "Reach, Trip",
+            "damage": "1d10 S",
+            "range": ""
+        },
+        {
+            "name": "Gun Sword",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Uncommon, Versatile P, Combination, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Halberd",
+            "weapon_type": "Melee",
+            "trait": "Reach, Versatile S",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Hammer Gun",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Shove, Uncommon, Combination, Uncommon",
+            "damage": "1d10 B",
+            "range": ""
+        },
+        {
+            "name": "Hand Adze",
+            "weapon_type": "Melee",
+            "trait": "Agile, Forceful, Grippli, Sweep, Thrown 10 ft.",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Hatchet",
+            "weapon_type": "Melee",
+            "trait": "Agile, Sweep, Thrown  10 ft.",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Horsechopper",
+            "weapon_type": "Melee",
+            "trait": "Goblin, Reach, Trip, Uncommon, Versatile P",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Injection Spear",
+            "weapon_type": "Melee",
+            "trait": "Injection, Reach, Uncommon",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Jiu Huan Dao",
+            "weapon_type": "Melee",
+            "trait": "Sweep, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Kama",
+            "weapon_type": "Melee",
+            "trait": "Agile, Monk, Trip, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Katana",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Two-Hand 1d10, Uncommon, Versatile P",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Khakkara",
+            "weapon_type": "Melee",
+            "trait": "Monk, Shove, Two-Hand d10, Uncommon, Versatile P",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Khopesh",
+            "weapon_type": "Melee",
+            "trait": "Trip, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Kris",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d8, Finesse",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Kukri",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Trip, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Kusarigama",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Monk, Reach, Trip, Uncommon, Versatile B",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Lance",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Jousting 1d6, Reach",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Lancer",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Reach, Combination",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Leiomano",
+            "weapon_type": "Melee",
+            "trait": "Fatal d10, Uncommon, Versatile S",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Light Hammer",
+            "weapon_type": "Melee",
+            "trait": "Agile, Thrown 20 ft.",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Light Pick",
+            "weapon_type": "Melee",
+            "trait": "Agile, Fatal 1d8",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Lion Scythe",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Trip, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Long Hammer",
+            "weapon_type": "Melee",
+            "trait": "Brace, Dwarf, Reach, Trip, Versatile P",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Longsword",
+            "weapon_type": "Melee",
+            "trait": "Versatile P",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Mace Multipistol",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Finesse, Shove, Uncommon, Combination, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Machete",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Sweep",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Main-gauche",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Parry, Versatile S",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Mambele",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Disarm, Thrown 20 ft., Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Maul",
+            "weapon_type": "Melee",
+            "trait": "Shove",
+            "damage": "1d12 B",
+            "range": ""
+        },
+        {
+            "name": "Meteor Hammer",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Disarm, Reach, Trip",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Mikazuki",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Disarm, Monk, Parry, Combination",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Monkey's Fist",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Monk, Nonlethal",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Naginata",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Reach, Uncommon, Versatile P",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Nunchaku",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Disarm, Finesse, Monk, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Ogre Hook",
+            "weapon_type": "Melee",
+            "trait": "Deadly d10, Trip, Uncommon",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Orc Knuckle Dagger",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Orc, Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Panabas",
+            "weapon_type": "Melee",
+            "trait": "Forceful, Sweep, Two-Hand d10",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Pantograph Gauntlet",
+            "weapon_type": "Melee",
+            "trait": "Deadly d6, Monk, Reach, Shove, Uncommon",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Pick",
+            "weapon_type": "Melee",
+            "trait": "Fatal 1d10",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Piercing Wind",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Finesse, Sweep, Uncommon, Combination, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Piranha Kiss",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Polytool",
+            "weapon_type": "Melee",
+            "trait": "Agile, Modular (B, P, or S), Uncommon",
+            "damage": "1d6 modular",
+            "range": ""
+        },
+        {
+            "name": "Probing Cane",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Sweep",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Ranseur",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Reach",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Rapier",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Disarm, Finesse",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Rapier Pistol",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Deadly d8, Disarm, Finesse, Uncommon, Combination, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Reinforced Stock",
+            "weapon_type": "Melee",
+            "trait": "Attached to crossbow or firearm, Finesse, Two-Hand d8",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Rope Dart",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Sweep, Tethered, Thrown 20 ft., Trip, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Rungu",
+            "weapon_type": "Melee",
+            "trait": "Grippli, Shove, Thrown 30 ft.",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Sai",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Monk, Uncommon, Versatile B",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Sansetsukon",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Disarm, Monk, Parry, Uncommon",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Sap",
+            "weapon_type": "Melee",
+            "trait": "Agile, Nonlethal",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Scimitar",
+            "weapon_type": "Melee",
+            "trait": "Forceful, Sweep",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Scizore",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Parry",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Scorpion Whip",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Reach, Trip, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Scourge",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Nonlethal, Sweep",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Scythe",
+            "weapon_type": "Melee",
+            "trait": "Deadly d10, Trip",
+            "damage": "1d10 S",
+            "range": ""
+        },
+        {
+            "name": "Shauth Blade",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d8, Finesse, Uncommon, Versatile P",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Shield Bash",
+            "weapon_type": "Melee",
+            "trait": "",
+            "damage": "1d4 B",
+            "range": ""
+        },
+        {
+            "name": "Shield Boss",
+            "weapon_type": "Melee",
+            "trait": "Attached to Shield",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Shield Spikes",
+            "weapon_type": "Melee",
+            "trait": "Attached to Shield",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Shortsword",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Versatile S",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Spiked Chain",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Trip, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Starknife",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d6, Finesse, Thrown 20 ft., Versatile S",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Sword Cane",
+            "weapon_type": "Melee",
+            "trait": "Agile, Concealable, Finesse",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Talwar",
+            "weapon_type": "Melee",
+            "trait": "Forceful, Two-Hand d10, Versatile P",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Tekko-Kagi",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Free-Hand, Monk, Parry, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Temple Sword",
+            "weapon_type": "Melee",
+            "trait": "Monk, Trip, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Tengu Gale Blade",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Tengu, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Tetsubo",
+            "weapon_type": "Melee",
+            "trait": "Razing, Shove, Sweep, Uncommon",
+            "damage": "1d10 B",
+            "range": ""
+        },
+        {
+            "name": "Thorn Whip",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Ghoran, Reach, Trip, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Three Peaked Tree",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Elf, Tethered, Thrown 20 ft., Uncommon, Combination, Uncommon",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Tonfa",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Monk, Parry, Twin, Uncommon",
+            "damage": "1d4",
+            "range": ""
+        },
+        {
+            "name": "Trident",
+            "weapon_type": "Melee",
+            "trait": "Thrown 20 ft.",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "Triggerbrand",
+            "weapon_type": "Melee",
+            "trait": "Critical Fusion, Finesse, Versatile S, Combination, Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Umbrella Injector",
+            "weapon_type": "Melee",
+            "trait": "Concealable, Finesse, Injection, Parry, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Urumi",
+            "weapon_type": "Melee",
+            "trait": "Deadly d10, Sweep, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Wakizashi",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d8, Finesse, Uncommon, Versatile P",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "War Flail",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Sweep, Trip",
+            "damage": "1d10 B",
+            "range": ""
+        },
+        {
+            "name": "War Lance",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Jousting d6, Parry, Shove, Uncommon",
+            "damage": "1d8 P",
+            "range": ""
+        },
+        {
+            "name": "War Razor",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backstabber, Deadly d8, Finesse",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Warhammer",
+            "weapon_type": "Melee",
+            "trait": "Shove",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Whip",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Nonlethal, Reach, Trip",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Whipstaff",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Monk, Parry, Sweep, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Wish Blade",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Geniekin, Resonant, Two-Hand 1d10, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Wish Knife",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Geniekin, Resonant, Uncommon, Versatile S",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Aklys",
+            "weapon_type": "Melee",
+            "trait": "Ranged Trip, Tethered, Thrown 20 feet, Trip, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Aldori Dueling Sword",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Uncommon, Versatile P",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Bladed Diabolo",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Disarm, Finesse, Thrown 40 ft., Trip, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Bladed Hoop",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Sweep, Two-Hand 1d8, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Broadspear",
+            "weapon_type": "Melee",
+            "trait": "Reach, Sweep, Versatile S",
+            "damage": "1d10 P",
+            "range": ""
+        },
+        {
+            "name": "Butchering Axe",
+            "weapon_type": "Melee",
+            "trait": "Orc, Shove, Sweep, Uncommon",
+            "damage": "1d12 S",
+            "range": ""
+        },
+        {
+            "name": "Butterfly Sword",
+            "weapon_type": "Melee",
+            "trait": "Agile, Concealable, Disarm, Finesse, Monk, Parry, Twin, Uncommon",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Chain Sword",
+            "weapon_type": "Melee",
+            "trait": "Finesse, Reach, Sweep, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Clockwork Macuahuitl",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Clockwork, Forceful, Rare, Versatile B",
+            "damage": "1d10 S",
+            "range": ""
+        },
+        {
+            "name": "Donchak",
+            "weapon_type": "Melee",
+            "trait": "Hampering, Reach, Reload 1, Tethered, Thrown 20 ft., Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Dwarven Dorn-Dergar",
+            "weapon_type": "Melee",
+            "trait": "Dwarf, Razing, Reach, Uncommon",
+            "damage": "1d10 B",
+            "range": ""
+        },
+        {
+            "name": "Dwarven Waraxe",
+            "weapon_type": "Melee",
+            "trait": "Dwarf, Sweep, Two-Hand 1d12, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Explosive Dogslicer",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backstabber, Critical Fusion, Finesse, Goblin, Uncommon, Combination, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Falcata",
+            "weapon_type": "Melee",
+            "trait": "Fatal d12",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Feng Huo Lun",
+            "weapon_type": "Melee",
+            "trait": "Agile, Disarm, Finesse, Monk, Parry, Twin, Uncommon, Versatile P",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Fire Poi",
+            "weapon_type": "Melee",
+            "trait": "Agile, Backswing, Finesse, Twin, Uncommon",
+            "damage": "1d4 B + 1d4 F",
+            "range": ""
+        },
+        {
+            "name": "Flying Talon",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Kobold, Ranged Trip, Tethered, thrown 10 ft., Trip, Uncommon",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Gada",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Two-Hand d12, Vanara",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Gnome Flickmace",
+            "weapon_type": "Melee",
+            "trait": "Gnome, Reach, Sweep, Uncommon",
+            "damage": "1d6 B",
+            "range": ""
+        },
+        {
+            "name": "Hook Sword",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Monk, Parry, Trip, Twin, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Kalis",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Uncommon, Versatile P",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Karambit",
+            "weapon_type": "Melee",
+            "trait": "Agile, Fatal d8, Finesse, Uncommon, Versatile S",
+            "damage": "1d4 P",
+            "range": ""
+        },
+        {
+            "name": "Nodachi",
+            "weapon_type": "Melee",
+            "trait": "Brace, Deadly d12, Reach",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Orc Necksplitter",
+            "weapon_type": "Melee",
+            "trait": "Forceful, Orc, Sweep, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Rhoka Sword",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Two-Hand 1d10, Uncommon",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Sawtooth Saber",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Twin, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Shauth Lash",
+            "weapon_type": "Melee",
+            "trait": "Deadly d10, Finesse, Trip, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Sickle-Saber",
+            "weapon_type": "Melee",
+            "trait": "Backswing, Forceful, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Spiral Rapier",
+            "weapon_type": "Melee",
+            "trait": "Disarm, Finesse, Parry, Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Switchscythe",
+            "weapon_type": "Melee",
+            "trait": "Fatal d10, Gnome, Modular (P and grapple, or S and sweep), Uncommon",
+            "damage": "1d6 P",
+            "range": ""
+        },
+        {
+            "name": "Tamchal Chakram",
+            "weapon_type": "Melee",
+            "trait": "Agile, Deadly d6, Finesse, Thrown 20 feet, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Three-Section Naginata",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Forceful, Sweep, Uncommon, Versatile B",
+            "damage": "1d8 S",
+            "range": ""
+        },
+        {
+            "name": "Tricky Pick",
+            "weapon_type": "Melee",
+            "trait": "Backstabber, Fatal 1d10, Kobold, Modular (B, P, or S), Uncommon",
+            "damage": "1d6 modular",
+            "range": ""
+        },
+        {
+            "name": "Visap",
+            "weapon_type": "Melee",
+            "trait": "Agile, Finesse, Injection, Uncommon, Versatile P, Vishkanya",
+            "damage": "1d4 S",
+            "range": ""
+        },
+        {
+            "name": "Whip Claw",
+            "weapon_type": "Melee",
+            "trait": "Catfolk, Finesse, Hampering, Reach, Uncommon",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Wrecker",
+            "weapon_type": "Melee",
+            "trait": "Dwarf, Razing, Reach, Combination",
+            "damage": "1d8 B",
+            "range": ""
+        },
+        {
+            "name": "Zulfikar",
+            "weapon_type": "Melee",
+            "trait": "Deadly d8, Disarm, Sweep, Uncommon, Versatile P",
+            "damage": "1d6 S",
+            "range": ""
+        },
+        {
+            "name": "Air Repeater",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Repeating, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Alchemical Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "Alchemical, Uncommon",
+            "damage": "1d8 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Atlatl",
+            "weapon_type": "Ranged",
+            "trait": "Propulsive",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Blowgun",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Nonlethal",
+            "damage": "1 P",
+            "range": "20 ft."
+        },
+        {
+            "name": "Coat Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Concealable, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "1d8 P",
+            "range": "120 ft."
+        },
+        {
+            "name": "Dart",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Thrown",
+            "damage": "1d4 P",
+            "range": "20 ft."
+        },
+        {
+            "name": "Fire Lance",
+            "weapon_type": "Ranged",
+            "trait": "Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "10 ft."
+        },
+        {
+            "name": "Flintlock Musket",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "70 ft."
+        },
+        {
+            "name": "Flintlock Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "40 ft."
+        },
+        {
+            "name": "Hand Cannon",
+            "weapon_type": "Ranged",
+            "trait": "Modular B, P, or S, Uncommon",
+            "damage": "1d6 modular",
+            "range": "30 ft."
+        },
+        {
+            "name": "Hand Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Heavy Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "1d10 P",
+            "range": "120 ft."
+        },
+        {
+            "name": "Javelin",
+            "weapon_type": "Ranged",
+            "trait": "Thrown",
+            "damage": "1d6 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Long Air Repeater",
+            "weapon_type": "Ranged",
+            "trait": "Kickback, Repeating, Uncommon",
+            "damage": "1d4 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Shield Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Attached to shield, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "20 ft."
+        },
+        {
+            "name": "Sling",
+            "weapon_type": "Ranged",
+            "trait": "Propulsive",
+            "damage": "1d6 B",
+            "range": "50 ft."
+        },
+        {
+            "name": "Alchemical Bomb",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "Varies",
+            "range": "20 ft."
+        },
+        {
+            "name": "Arbalest",
+            "weapon_type": "Ranged",
+            "trait": "Backstabber",
+            "damage": "1d10 P",
+            "range": "110 ft."
+        },
+        {
+            "name": "Arquebus",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Fatal d12, Kickback, Uncommon",
+            "damage": "1d8 P",
+            "range": "150 ft."
+        },
+        {
+            "name": "Axe Musket",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "50 ft."
+        },
+        {
+            "name": "Backpack Ballista",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "1d12 P",
+            "range": "180 ft."
+        },
+        {
+            "name": "Big Boom Gun",
+            "weapon_type": "Ranged",
+            "trait": "Cobbled, Fatal d12, Goblin, Modular B, P, or S, Uncommon",
+            "damage": "1d6 modular",
+            "range": "20 ft."
+        },
+        {
+            "name": "Black Powder Knuckle Dusters",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal d8, Monk, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Blunderbuss",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Scatter 10 ft., Uncommon",
+            "damage": "1d8 P",
+            "range": "40 ft."
+        },
+        {
+            "name": "Bola",
+            "weapon_type": "Ranged",
+            "trait": "Nonlethal, Ranged Trip, Thrown",
+            "damage": "1d6 B",
+            "range": "20 ft."
+        },
+        {
+            "name": "Boomerang",
+            "weapon_type": "Ranged",
+            "trait": "Recovery, Thrown, Uncommon",
+            "damage": "1d6 B",
+            "range": "60 ft."
+        },
+        {
+            "name": "Bow Staff",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Deadly d8, Monk",
+            "damage": "1d6 P",
+            "range": "80 ft."
+        },
+        {
+            "name": "Cane Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concealable, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Chakram",
+            "weapon_type": "Ranged",
+            "trait": "Thrown",
+            "damage": "1d8 S",
+            "range": "20 ft."
+        },
+        {
+            "name": "Chakri",
+            "weapon_type": "Ranged",
+            "trait": "Recovery, Thrown, Uncommon",
+            "damage": "1d6 S",
+            "range": "40 ft."
+        },
+        {
+            "name": "Clan Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Dwarf, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "80 ft."
+        },
+        {
+            "name": "Composite Longbow",
+            "weapon_type": "Ranged",
+            "trait": "Deadly d10, Propulsive, Volley 30 ft.",
+            "damage": "1d8 P",
+            "range": "100 ft."
+        },
+        {
+            "name": "Composite Shortbow",
+            "weapon_type": "Ranged",
+            "trait": "Deadly d10, Propulsive",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Crescent Cross",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 3, Combination, Parry",
+            "damage": "1d6 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Dagger Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Dart Umbrella",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Concealable, Nonlethal, Uncommon",
+            "damage": "1 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Double-barreled Musket",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Double Barrel, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Double-Barreled Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Double Barrel, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Dragon Mouth Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Scatter 5 ft., Uncommon",
+            "damage": "1d6 P",
+            "range": "20 ft."
+        },
+        {
+            "name": "Dueling Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Concealable, Concussive, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Gakgung",
+            "weapon_type": "Ranged",
+            "trait": "Deadly d8, Monk, Propulsive",
+            "damage": "1d6 P",
+            "range": "100 ft."
+        },
+        {
+            "name": "Gauntlet Bow",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 4, Free-Hand, Parry",
+            "damage": "1d4 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Gnome Amalgam Musket",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal d10, Gnome, Uncommon",
+            "damage": "1d6 P",
+            "range": "50 ft."
+        },
+        {
+            "name": "Gun Sword",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Kickback, Uncommon",
+            "damage": "1d10 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Halfling Sling Staff",
+            "weapon_type": "Ranged",
+            "trait": "Halfling, Propulsive, Uncommon",
+            "damage": "1d10 B",
+            "range": "80 ft."
+        },
+        {
+            "name": "Hammer Gun",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Harmona Gun",
+            "weapon_type": "Ranged",
+            "trait": "Kickback, Uncommon",
+            "damage": "1d10 B",
+            "range": "150 ft."
+        },
+        {
+            "name": "Harpoon",
+            "weapon_type": "Ranged",
+            "trait": "Tethered, Thrown",
+            "damage": "1d8 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Jezail",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Fatal Aim d12, Uncommon",
+            "damage": "1d8 P",
+            "range": "90 ft."
+        },
+        {
+            "name": "Lancer",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 2, Combination",
+            "damage": "1d8 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Longbow",
+            "weapon_type": "Ranged",
+            "trait": "Deadly d10, Volley 30 ft.",
+            "damage": "1d8 P",
+            "range": "100 ft."
+        },
+        {
+            "name": "Mace Multipistol",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 3, Combination, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "20 ft."
+        },
+        {
+            "name": "Mikazuki",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Monk, Propulsive",
+            "damage": "1d6 P",
+            "range": "70 ft."
+        },
+        {
+            "name": "Mithral Tree",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Elf, Fatal d10, Parry, Uncommon",
+            "damage": "1d6 P",
+            "range": "150 ft."
+        },
+        {
+            "name": "Pepperbox",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 3, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Piercing Wind",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal Aim d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "40 ft."
+        },
+        {
+            "name": "Rapier Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Backstabber, Combination, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Repeating Heavy Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "1d10 P",
+            "range": "180 ft."
+        },
+        {
+            "name": "Rotary Bow",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 4",
+            "damage": "1d8 P",
+            "range": "80 ft."
+        },
+        {
+            "name": "Shield Bow",
+            "weapon_type": "Ranged",
+            "trait": "Deadly  d8, Parry",
+            "damage": "1d6 P",
+            "range": "50 ft."
+        },
+        {
+            "name": "Shobhad Longrifle",
+            "weapon_type": "Ranged",
+            "trait": "Backstabber, Concussive, Fatal d12, Kickback, Rare, Volley",
+            "damage": "1d8 P",
+            "range": "120 ft."
+        },
+        {
+            "name": "Shortbow",
+            "weapon_type": "Ranged",
+            "trait": "Deadly d10",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Shuriken",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Monk, Thrown, Uncommon",
+            "damage": "1d4 P",
+            "range": "20 ft."
+        },
+        {
+            "name": "Slide Pistol",
+            "weapon_type": "Ranged",
+            "trait": "Capacity 5, Concussive, Fatal d10, Uncommon",
+            "damage": "1d6 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Spoon Gun",
+            "weapon_type": "Ranged",
+            "trait": "Cobbled, Goblin, Modular B, P, or S, Scatter 5 ft., Uncommon",
+            "damage": "1d6 modular",
+            "range": "30 ft."
+        },
+        {
+            "name": "Spraysling",
+            "weapon_type": "Ranged",
+            "trait": "Halfling, Propulsive, Scatter 5 ft., Uncommon",
+            "damage": "1d6 B",
+            "range": "20 ft."
+        },
+        {
+            "name": "Sukgung",
+            "weapon_type": "Ranged",
+            "trait": "Fatal Aim d12",
+            "damage": "1d8 P",
+            "range": "200 ft."
+        },
+        {
+            "name": "Sun Sling",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Propulsive, Uncommon",
+            "damage": "1d8 P",
+            "range": "100 ft."
+        },
+        {
+            "name": "Three Peaked Tree",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Elf, Fatal d10, Parry, Uncommon",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Thunder Sling",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Propulsive, Tengu, Uncommon",
+            "damage": "1d6 P",
+            "range": "50 ft."
+        },
+        {
+            "name": "Triggerbrand",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Concussive, Fatal d8, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "Wrist Launcher",
+            "weapon_type": "Ranged",
+            "trait": "Agile, Concealable, Free-Hand, Uncommon",
+            "damage": "1d4 P",
+            "range": "30 ft."
+        },
+        {
+            "name": "8-Round Magazine",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Arrows",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Backpack Ballista Bolts",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Backpack Catapult Stones",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Blowgun Darts",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Bolts",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Bolts (Phalanx Piercer)",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Firearm Ammunition (10 rounds)",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Firearm Ammunition (5 rounds)",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Magazine (Air Repeater)",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Magazine (Long Air Repeater)",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Repeating Crossbow Magazine",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Repeating Hand Crossbow Magazine",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Repeating Heavy Crossbow Magazine",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Sling Bullets",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Spray Pellet",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Sun Shot",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Propulsive, Uncommon",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Wooden Taws",
+            "weapon_type": "Ranged",
+            "trait": "",
+            "damage": "",
+            "range": ""
+        },
+        {
+            "name": "Backpack Catapult",
+            "weapon_type": "Ranged",
+            "trait": "Uncommon, Volley 50 ft.",
+            "damage": "1d12 B",
+            "range": "240 ft."
+        },
+        {
+            "name": "Barricade Buster",
+            "weapon_type": "Ranged",
+            "trait": "Kickback, Orc, Razing, Repeating, Uncommon, Volley 20 ft.",
+            "damage": "1d10 B",
+            "range": "40 ft."
+        },
+        {
+            "name": "Daikyu",
+            "weapon_type": "Ranged",
+            "trait": "Propulsive, Uncommon",
+            "damage": "1d8 P",
+            "range": "80 ft."
+        },
+        {
+            "name": "Dwarven Scattergun",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Dwarf, Kickback, Scatter 10 ft., Uncommon",
+            "damage": "1d8 P",
+            "range": "50 ft."
+        },
+        {
+            "name": "Explosive Dogslicer",
+            "weapon_type": "Ranged",
+            "trait": "Backstabber, Combination, Fatal d10, Goblin, Scatter 5 ft., Uncommon",
+            "damage": "1d6 S",
+            "range": "20 ft."
+        },
+        {
+            "name": "Flingflenser",
+            "weapon_type": "Ranged",
+            "trait": "Backstabber, Fatal d10, Goblin, Scatter 5 ft., Uncommon",
+            "damage": "1d6 S",
+            "range": "30 ft."
+        },
+        {
+            "name": "Hongali Hornbow",
+            "weapon_type": "Ranged",
+            "trait": "Deadly d6, Propulsive, Uncommon",
+            "damage": "1d8 P",
+            "range": "40 ft."
+        },
+        {
+            "name": "Phalanx Piercer",
+            "weapon_type": "Ranged",
+            "trait": "Concussive, Hobgoblin, Propulsive, Razing, Volley 30 ft.",
+            "damage": "1d10 P",
+            "range": "80 ft."
+        },
+        {
+            "name": "Repeating Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "Repeating, Uncommon",
+            "damage": "1d8 P",
+            "range": "120 ft."
+        },
+        {
+            "name": "Repeating Hand Crossbow",
+            "weapon_type": "Ranged",
+            "trait": "Repeating, Uncommon",
+            "damage": "1d6 P",
+            "range": "60 ft."
+        },
+        {
+            "name": "Taw Launcher",
+            "weapon_type": "Ranged",
+            "trait": "Conrasu, Deadly d10, Modular (B, P, or S), Uncommon",
+            "damage": "1d10 modular",
+            "range": "100 ft."
+        },
+        {
+            "name": "Wrecker",
+            "weapon_type": "Ranged",
+            "trait": "Combination, Dwarf, Ranged Trip, Razing",
+            "damage": "1d6 B",
+            "range": "20 ft."
+        }
+    ],
+    "armorData": [
+        {
+            "name": "Gi",
+            "trait": "Comfort",
+            "ac": "0",
+            "dex_cap": "+5",
+            "armor_group": "Cloth"
+        },
+        {
+            "name": "Scroll Robes",
+            "trait": "Inscribed",
+            "ac": "0",
+            "dex_cap": "+5",
+            "armor_group": "Cloth"
+        },
+        {
+            "name": "Unarmored",
+            "trait": "",
+            "ac": "0",
+            "dex_cap": "",
+            "armor_group": ""
+        },
+        {
+            "name": "Explorer's Clothing",
+            "trait": "Comfort",
+            "ac": "0",
+            "dex_cap": "+5",
+            "armor_group": "Cloth"
+        },
+        {
+            "name": "Leaf Weave",
+            "trait": "Laminar",
+            "ac": "1",
+            "dex_cap": "+4",
+            "armor_group": "Wood"
+        },
+        {
+            "name": "Leather Lamellar",
+            "trait": "Laminar",
+            "ac": "1",
+            "dex_cap": "+4",
+            "armor_group": "Composite"
+        },
+        {
+            "name": "Armored Cloak",
+            "trait": "Comfort, Flexible",
+            "ac": "1",
+            "dex_cap": "+3",
+            "armor_group": ""
+        },
+        {
+            "name": "Padded Armor",
+            "trait": "Comfort",
+            "ac": "1",
+            "dex_cap": "+3",
+            "armor_group": "Cloth"
+        },
+        {
+            "name": "Leather Armor",
+            "trait": "",
+            "ac": "1",
+            "dex_cap": "+4",
+            "armor_group": "Leather"
+        },
+        {
+            "name": "Armored Coat",
+            "trait": "Comfort, Flexible, Uncommon",
+            "ac": "2",
+            "dex_cap": "+2",
+            "armor_group": "Leather"
+        },
+        {
+            "name": "Buckle Armor",
+            "trait": "Adjusted Storage, Noisy",
+            "ac": "2",
+            "dex_cap": "+3",
+            "armor_group": "Leather"
+        },
+        {
+            "name": "Mantis Shell",
+            "trait": "Adjusted Weapon Harness, Uncommon",
+            "ac": "2",
+            "dex_cap": "+3",
+            "armor_group": "Skeletal"
+        },
+        {
+            "name": "Quilted Armor",
+            "trait": "Comfort",
+            "ac": "2",
+            "dex_cap": "+2",
+            "armor_group": "Cloth"
+        },
+        {
+            "name": "Sankeit",
+            "trait": "Laminar",
+            "ac": "2",
+            "dex_cap": "+3",
+            "armor_group": "Wood"
+        },
+        {
+            "name": "Studded Leather Armor",
+            "trait": "",
+            "ac": "2",
+            "dex_cap": "+3",
+            "armor_group": "Leather"
+        },
+        {
+            "name": "Chain Shirt",
+            "trait": "Flexible, Noisy",
+            "ac": "2",
+            "dex_cap": "+3",
+            "armor_group": "Chain"
+        },
+        {
+            "name": "Ceramic Plate",
+            "trait": "Adjusted Armor Latches, Noisy",
+            "ac": "3",
+            "dex_cap": "+2",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Coral Armor",
+            "trait": "Aquadynamic",
+            "ac": "3",
+            "dex_cap": "+2",
+            "armor_group": "Skeletal"
+        },
+        {
+            "name": "Niyaháat",
+            "trait": "Laminar",
+            "ac": "3",
+            "dex_cap": "+2",
+            "armor_group": "Skeletal"
+        },
+        {
+            "name": "Wooden Breastplate",
+            "trait": "",
+            "ac": "3",
+            "dex_cap": "+2",
+            "armor_group": "Wood"
+        },
+        {
+            "name": "Hide Armor",
+            "trait": "",
+            "ac": "3",
+            "dex_cap": "+2",
+            "armor_group": "Leather"
+        },
+        {
+            "name": "Scale Mail",
+            "trait": "",
+            "ac": "3",
+            "dex_cap": "+2",
+            "armor_group": "Composite"
+        },
+        {
+            "name": "Hellknight Breastplate",
+            "trait": "Uncommon",
+            "ac": "4",
+            "dex_cap": "+1",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Lamellar Breastplate",
+            "trait": "Hindering, Laminar",
+            "ac": "4",
+            "dex_cap": "+1",
+            "armor_group": "Composite"
+        },
+        {
+            "name": "Lattice Armor",
+            "trait": "",
+            "ac": "4",
+            "dex_cap": "+1",
+            "armor_group": "Chain"
+        },
+        {
+            "name": "Chain Mail",
+            "trait": "Flexible, Noisy",
+            "ac": "4",
+            "dex_cap": "+1",
+            "armor_group": "Chain"
+        },
+        {
+            "name": "Breastplate",
+            "trait": "",
+            "ac": "4",
+            "dex_cap": "+1",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Hellknight Half Plate",
+            "trait": "Uncommon",
+            "ac": "5",
+            "dex_cap": "+1",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Splint Mail",
+            "trait": "",
+            "ac": "5",
+            "dex_cap": "+1",
+            "armor_group": "Composite"
+        },
+        {
+            "name": "Half Plate",
+            "trait": "",
+            "ac": "5",
+            "dex_cap": "+1",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Gray Maiden Plate",
+            "trait": "Bulwark",
+            "ac": "6",
+            "dex_cap": "+0",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Bastion Plate",
+            "trait": "Bulwark, Entrench Melee, Hindering",
+            "ac": "6",
+            "dex_cap": "+0",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Fortress Plate",
+            "trait": "Bulwark, Entrench Ranged, Ponderous",
+            "ac": "6",
+            "dex_cap": "+0",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "Hellknight Plate",
+            "trait": "Bulwark, Uncommon",
+            "ac": "6",
+            "dex_cap": "+0",
+            "armor_group": "Plate"
+        },
+        {
+            "name": "O-Yoroi",
+            "trait": "Bulwark, Laminar",
+            "ac": "6",
+            "dex_cap": "+0",
+            "armor_group": "Composite"
+        },
+        {
+            "name": "Full Plate",
+            "trait": "Bulwark",
+            "ac": "6",
+            "dex_cap": "+0",
+            "armor_group": "Plate"
+        }
+    ]
+}

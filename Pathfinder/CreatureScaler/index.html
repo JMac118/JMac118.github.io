@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder Test Page</title>
+    <script>
+        let npcData = {};
+        let abilityModifierScales = [];
+        let perceptionScales = [];
+        let skillsScales = [];
+        let armorClassScales = [];
+        let savingThrowScales = [];
+        let strikeAttackBonusScales = [];
+        let strikeDamageScales = [];
+        let hitPointsScales = [];
+        let safeWeapons = [];
+        let safeArmor = [];
+        let weaponData = [];
+        let armorData = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('npcData.json')
+                .then(response => response.json())
+                .then(data => {
+                    npcData = data.npcData;
+                    abilityModifierScales = data.abilityModifierScales;
+                    perceptionScales = data.perceptionScales;
+                    skillsScales = data.skillsScales;
+                    armorClassScales = data.armorClassScales;
+                    savingThrowScales = data.savingThrowScales;
+                    strikeAttackBonusScales = data.strikeAttackBonusScales;
+                    strikeDamageScales = data.strikeDamageScales;
+                    hitPointsScales = data.hitPointsScales;
+                    safeWeapons = data.safeWeapons;
+                    safeArmor = data.safeArmor;
+                    weaponData = data.weaponData;
+                    armorData = data.armorData;
+
+                    const options = Object.keys(npcData);
+                    const dropdown = document.getElementById('dropdown');
+                    options.forEach(option => {
+                        const opt = document.createElement('option');
+                        opt.value = option;
+                        opt.textContent = option;
+                        dropdown.appendChild(opt);
+                    });
+
+                    dropdown.addEventListener('change', updateNPCStats);
+                })
+                .catch(error => {
+                    console.error('Error loading JSON data:', error);
+                });
+        });
+
+        function getAbilityModifier(level, ability) {
+            const scale = abilityModifierScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[ability];
+        }
+
+        function getPerception(level, category) {
+            const scale = perceptionScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function getSkill(level, category) {
+            const scale = skillsScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function getAC(level, category) {
+            const scale = armorClassScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function getSavingThrow(level, category) {
+            const scale = savingThrowScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function getStrikeAttackBonus(level, category) {
+            const scale = strikeAttackBonusScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function getStrikeDamage(level, category) {
+            const scale = strikeDamageScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function getHitPoints(level, category) {
+            const scale = hitPointsScales.find(scale => scale.level === level);
+            if (!scale) return null;
+            return scale[category];
+        }
+
+        function findClosestCategory(value, level, table) {
+            if (!table) {
+                console.error('Table is undefined');
+                return 'moderate'; // Default category if not found
+            }
+
+            const scale = table.find(scale => scale.level === level);
+            if (!scale) return 'moderate'; // Default category if not found
+
+            let closestCategory = 'moderate';
+            let closestDifference = Infinity;
+
+            for (const category in scale) {
+                if (category === 'level') continue;
+                const categoryValue = scale[category];
+                const difference = Math.abs(categoryValue - value);
+                if (difference < closestDifference) {
+                    closestDifference = difference;
+                    closestCategory = category;
+                }
+            }
+
+            return closestCategory;
+        }
+
+        function getSafeItem(level, itemType) {
+            const table = itemType === 'weapon' ? safeWeapons : safeArmor;
+            let highestSafeItem = '';
+            table.forEach(scale => {
+                const creatureLevel = parseInt(scale.creatureLevel.split('–')[0], 10);
+                if (creatureLevel <= level) {
+                    highestSafeItem = scale.safeItemLevel;
+                }
+            });
+            return highestSafeItem;
+        }
+
+        function normalizeItemName(item) {
+            return item.toLowerCase().replace(/['"]/g, '').trim();
+        }
+
+        function isWeapon(item) {
+            const normalizedItem = normalizeItemName(item);
+            return weaponData.some(weapon => normalizedItem.includes(normalizeItemName(weapon.name)));
+        }
+
+        function isArmor(item) {
+            const normalizedItem = normalizeItemName(item);
+            return armorData.some(armor => normalizedItem.includes(normalizeItemName(armor.name)));
+        }
+
+        function updatePage() {
+            const level = parseInt(document.getElementById('level').value);
+            const choice = document.getElementById('dropdown').value;
+            const npc = npcData[choice];
+
+            if (!npc) {
+                alert('NPC not found');
+                return;
+            }
+
+            const originalPerception = npc.perception;
+            const originalLevel = npc.level;
+            const perceptionCategory = findClosestCategory(originalPerception, originalLevel, perceptionScales);
+            const scaledPerception = getPerception(level, perceptionCategory);
+
+            const originalStats = npc.abilities;
+            const stats = {};
+            for (const ability in originalStats) {
+                const originalValue = originalStats[ability];
+                const abilityCategory = findClosestCategory(originalValue, originalLevel, abilityModifierScales);
+                stats[ability] = getAbilityModifier(level, abilityCategory);
+            }
+
+            const originalSkills = npc.skills;
+            const scaledSkills = {};
+            for (const skill in originalSkills) {
+                const originalSkillValue = originalSkills[skill];
+                const skillCategory = findClosestCategory(originalSkillValue, originalLevel, skillsScales);
+                scaledSkills[skill] = getSkill(level, skillCategory);
+            }
+
+            const originalAC = npc.ac;
+            const acCategory = findClosestCategory(originalAC, originalLevel, armorClassScales);
+            const scaledAC = getAC(level, acCategory);
+
+            const originalFort = npc.fort;
+            const fortCategory = findClosestCategory(originalFort, originalLevel, savingThrowScales);
+            const scaledFort = getSavingThrow(level, fortCategory);
+
+            const originalRef = npc.ref;
+            const refCategory = findClosestCategory(originalRef, originalLevel, savingThrowScales);
+            const scaledRef = getSavingThrow(level, refCategory);
+
+            const originalWill = npc.will;
+            const willCategory = findClosestCategory(originalWill, originalLevel, savingThrowScales);
+            const scaledWill = getSavingThrow(level, willCategory);
+
+            const originalHP = npc.hp;
+            const hpCategory = findClosestCategory(originalHP, originalLevel, hitPointsScales);
+            const scaledHP = getHitPoints(level, hpCategory);
+
+            const originalMelee = npc.melee || {};
+            const scaledMelee = {};
+            for (const weapon in originalMelee) {
+                const originalAttackBonus = originalMelee[weapon].attack;
+                const attackCategory = findClosestCategory(originalAttackBonus, originalLevel, strikeAttackBonusScales);
+                const scaledAttackBonus = getStrikeAttackBonus(level, attackCategory);
+                const damageCategory = findClosestCategory(originalAttackBonus, originalLevel, strikeDamageScales);
+                const scaledDamage = getStrikeDamage(level, damageCategory);
+                scaledMelee[weapon] = {
+                    attack: scaledAttackBonus,
+                    damage: scaledDamage
+                };
+            }
+
+            const originalRanged = npc.ranged || {};
+            const scaledRanged = {};
+            for (const weapon in originalRanged) {
+                const originalAttackBonus = originalRanged[weapon].attack;
+                const attackCategory = findClosestCategory(originalAttackBonus, originalLevel, strikeAttackBonusScales);
+                const scaledAttackBonus = getStrikeAttackBonus(level, attackCategory);
+                const damageCategory = findClosestCategory(originalAttackBonus, originalLevel, strikeDamageScales);
+                const scaledDamage = getStrikeDamage(level, damageCategory);
+                scaledRanged[weapon] = {
+                    attack: scaledAttackBonus,
+                    damage: scaledDamage
+                };
+            }
+
+            const scaledItems = npc.items.map(item => {
+                if (isWeapon(item)) {
+                    const safeItem = getSafeItem(level, 'weapon');
+                    return safeItem ? `${safeItem.replace(/^\d+\s*/, '')} ${item}` : item;
+                } else if (isArmor(item)) {
+                    const safeItem = getSafeItem(level, 'armor');
+                    return safeItem ? `${safeItem.replace(/^\d+\s*/, '')} ${item}` : item;
+                }
+                return item;
+            });
+
+            document.getElementById('npc-stats').innerHTML = `
+                <h2>${choice}</h2>
+                <p>Level: ${level}</p>
+                <p>Perception: ${scaledPerception}</p>
+                <p>Skills: Athletics ${scaledSkills.athletics}, Intimidation ${scaledSkills.intimidation}, Legal Lore ${scaledSkills.legalLore}</p>
+                <p>Abilities: STR ${stats.str}, DEX ${stats.dex}, CON ${stats.con}, INT ${stats.int}, WIS ${stats.wis}, CHA ${stats.cha}</p>
+                <p>AC: ${scaledAC}</p>
+                <p>Fort: ${scaledFort}, Ref: ${scaledRef}, Will: ${scaledWill}</p>
+                <p>HP: ${scaledHP}</p>
+                <p>Speed: ${npc.speed} feet</p>
+                <p>Melee: ${Object.entries(scaledMelee).map(([weapon, data]) => `${weapon}: +${data.attack} (${data.damage})`).join(', ')}</p>
+                <p>Ranged: ${Object.entries(scaledRanged).map(([weapon, data]) => `${weapon}: +${data.attack} (${data.damage})`).join(', ')}</p>
+                <p>Items: ${scaledItems.join(', ')}</p>
+                <h3>Original Values</h3>
+                <p>Level: ${originalLevel}</p>
+                <p>Perception: ${originalPerception}</p>
+                <p>Skills: Athletics ${originalSkills.athletics}, Intimidation ${originalSkills.intimidation}, Legal Lore ${originalSkills.legalLore}</p>
+                <p>Abilities: STR ${npc.abilities.str}, DEX ${npc.abilities.dex}, CON ${npc.abilities.con}, INT ${npc.abilities.int}, WIS ${npc.abilities.wis}, CHA ${npc.abilities.cha}</p>
+                <p>AC: ${originalAC}</p>
+                <p>Fort: ${originalFort}, Ref: ${originalRef}, Will: ${originalWill}</p>
+                <p>HP: ${originalHP}</p>
+                <p>Speed: ${npc.speed} feet</p>
+                <p>Melee: ${Object.entries(originalMelee).map(([weapon, data]) => `${weapon}: +${data.attack} (${data.damage})`).join(', ')}</p>
+                <p>Ranged: ${Object.entries(originalRanged).map(([weapon, data]) => `${weapon}: +${data.attack} (${data.damage})`).join(', ')}</p>
+                <p>Items: ${npc.items.join(', ')}</p>
+            `;
+        }
+
+        function updateNPCStats() {
+            const choice = document.getElementById('dropdown').value;
+            const npc = npcData[choice];
+
+            if (!npc) {
+                alert('NPC not found');
+                return;
+            }
+
+            document.getElementById('npc-stats').innerHTML = `
+                <h2>${choice}</h2>
+                <p>Level: ${npc.level}</p>
+                <p>Perception: ${npc.perception}</p>
+                <p>Skills: Athletics ${npc.skills.athletics}, Intimidation ${npc.skills.intimidation}, Legal Lore ${npc.skills.legalLore}</p>
+                <p>Abilities: STR ${npc.abilities.str}, DEX ${npc.abilities.dex}, CON ${npc.abilities.con}, INT ${npc.abilities.int}, WIS ${npc.abilities.wis}, CHA ${npc.abilities.cha}</p>
+                <p>AC: ${npc.ac}</p>
+                <p>Fort: ${npc.fort}, Ref: ${npc.ref}, Will: ${npc.will}</p>
+                <p>HP: ${npc.hp}</p>
+                <p>Speed: ${npc.speed} feet</p>
+                <p>Melee: ${Object.entries(npc.melee || {}).map(([weapon, data]) => `${weapon}: +${data.attack} (${data.damage})`).join(', ')}</p>
+                <p>Ranged: ${Object.entries(npc.ranged || {}).map(([weapon, data]) => `${weapon}: +${data.attack} (${data.damage})`).join(', ')}</p>
+                <p>Items: ${npc.items.join(', ')}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h1>Pathfinder Test Page</h1>
+    <label for="level">Level:</label>
+    <input type="number" id="level" name="level">
+    <br>
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown" name="dropdown"></select>
+    <br>
+    <button onclick="updatePage()">Submit</button>
+    <div id="npc-stats"></div>
+</body>
+</html>
